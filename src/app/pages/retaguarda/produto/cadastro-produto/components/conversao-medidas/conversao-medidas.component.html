@@ -1,0 +1,68 @@
+<form class="row mt-3">
+   <div class="col-2">
+      <div class="mb-3">
+         <label for="unMedidaId2" class="form-label">Un Medida</label>
+         <select class="form-select form-select-sm" id="unMedidaId2" formControlName="unitOfMeasurement">
+            <option>
+            </option>
+         </select>
+      </div>
+   </div>
+   <div class="col-2">
+      <div class="mb-3">
+         <label for="fatorConversaoId" class="form-label">Fator Conversão</label>
+         <input type="text" class="form-control form-control-sm" id="fatorConversaoId" formControlName="conversionFactor">
+      </div>
+   </div>
+   <div class="col-2">
+      <div class="mb-3">
+         <label for="valorCustoId" class="form-label">Valor Custo R$</label>
+         <input type="text" class="form-control form-control-sm" id="valorCustoId">
+      </div>
+   </div>
+   <div class="col-2">
+      <div class="mb-3">
+         <label for="margemLucroId" class="form-label">Margem Lucro %</label>
+         <input type="text" class="form-control form-control-sm" id="margemLucroId" formControlName="profitMargin">
+      </div>
+   </div>
+   <div class="col-2">
+      <div class="mb-3">
+         <label for="valorVendaId" class="form-label">Valor Venda R$</label>
+         <input type="text" class="form-control form-control-sm" id="valorVendaId" formControlName="saleValue">
+      </div>
+   </div>
+   <div class="col-2 text-center">
+      <button type="button" class="btn btn-sm btn-outline-dark" style="margin-top: 30px; width: 100px;">
+         <i class="fas fa-plus"></i>
+      </button>
+   </div>
+   <div class="col-12">
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" id="conversaoPadraoEntradaId" formControlName="standardInputConversion">
+         <label class="form-check-label" for="conversaoPadraoEntradaId">
+            Conversão Padrão de Entrada
+         </label>
+      </div>
+   </div>
+   <div class="col-12 mt-3">
+      <table class="table table-bordered">
+         <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">Un. Medida</th>
+               <th scope="col">Fator Conv.</th>
+               <th scope="col">Entrada</th>
+               <th scope="col">ML</th>
+               <th scope="col">Custo</th>
+               <th scope="col">Venda</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</form>

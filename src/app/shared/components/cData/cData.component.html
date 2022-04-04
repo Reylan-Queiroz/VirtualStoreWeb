@@ -1,0 +1,6 @@
+<div class="col-12">
+   <button *ngFor="let btn of buttons;" [hidden]="this.btn.hidden" type="button" class="btn btn-outline-dark btn-default" id="{{'button_'+btn.name}}" style="margin-right: 15px"> <!--(click)="this[btn.methodName]()"-->
+
+      <i class="{{btn.icon}}" style="margin-right: 10px"></i>{{btn.name}}
+   </button>
+</div>
