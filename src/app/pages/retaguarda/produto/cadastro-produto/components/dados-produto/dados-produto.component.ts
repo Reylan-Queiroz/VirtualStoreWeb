@@ -8,6 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class DadosProdutoComponent implements OnInit {
    constructor() { }
 
-   ngOnInit() {
-   }
+   ngOnInit() { }
 }

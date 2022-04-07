@@ -9,7 +9,5 @@ export class CadastroProdutoComponent implements OnInit {
 
    constructor() { }
 
-   ngOnInit() {
-   }
-
+   ngOnInit() { }
 }

@@ -1,5 +1,3 @@
-
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
    styleUrls: ['./conversao-medidas.component.scss']
 })
 export class ConversaoMedidasComponent implements OnInit {
-   constructor() {
-   }
+   constructor() { }
 
-   ngOnInit() {
-   }
+   ngOnInit() { }
 }

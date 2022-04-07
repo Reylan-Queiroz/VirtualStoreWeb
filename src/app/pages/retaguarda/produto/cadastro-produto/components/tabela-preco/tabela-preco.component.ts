@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
    styleUrls: ['./tabela-preco.component.scss']
 })
 export class TabelaPrecoComponent implements OnInit {
-
    constructor() { }
 
-   ngOnInit() {
-   }
+   ngOnInit() { }
 }
