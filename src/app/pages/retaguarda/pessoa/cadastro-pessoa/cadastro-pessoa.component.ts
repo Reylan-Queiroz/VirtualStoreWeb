@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validator, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-pessoa',
@@ -10,7 +10,8 @@ export class CadastroPessoaComponent implements OnInit {
 
    formCadPessoa!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+   constructor(private fb: FormBuilder) { }
+
 
 
   ngOnInit(): void {

@@ -32,7 +32,7 @@
 
        <h5>Dados do cliente</h5>
 
-       <form action="" [formGroup]="formCadPessoa">
+       <form  [formGroup]="formCadPessoa">
            <div class="row" aria-disabled="true">
                <div class="col-8">
                    <div class="row">
@@ -197,7 +197,7 @@
                                </div>
                                <div class="col-6">
                                    <input type="text" class="form-control form-control-sm" formControlName="cep"
-                                       mask="00000-0000" [showMaskTyped]="true">
+                                       mask="00000-0000">
                                </div>
                            </div>
                        </div>
@@ -236,7 +236,7 @@
                            </div>
                            <div class="col-8">
                                <input type="tel" class="form-control form-control-sm" formControlName="residente"
-                                   mask="(00) 0000-0000" [showMaskTyped]="true">
+                                   mask="(00) 0000-0000">
                            </div>
                        </div>
                    </div>
@@ -248,7 +248,7 @@
                            </div>
                            <div class="col-8">
                                <input type="tel" class="form-control form-control-sm" formControlName="comercial"
-                                   mask="(00) 0000-0000" [showMaskTyped]="true">
+                                   mask="(00) 0000-0000">
                            </div>
                        </div>
                    </div>
@@ -260,7 +260,7 @@
                            </div>
                            <div class="col-8">
                                <input type="tel" class="form-control form-control-sm" formControlName="celular1"
-                                   mask="(00) 00000-0000" [showMaskTyped]="true">
+                                   mask="(00) 00000-0000">
                            </div>
                        </div>
                    </div>
@@ -272,7 +272,7 @@
                            </div>
                            <div class="col-8">
                                <input type="tel" class="form-control form-control-sm" formControlName="celular2"
-                                   mask="(00) 00000-0000" [showMaskTyped]="true">
+                                   mask="(00) 00000-0000">
                            </div>
                        </div>
                    </div>
@@ -314,9 +314,7 @@
                            </div>
                            <div class="col-2"></div>
                            <div class="col-4">
-                               <input type="text" class="form-control form-control-sm" formControlName="limiteCred"
-                                   currencyMask [(ngModel)]="value"
-                                   [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }">
+                               <input type="text" class="form-control form-control-sm" formControlName="limiteCred">
                            </div>
                        </div>
                    </div>
