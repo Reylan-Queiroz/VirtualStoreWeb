@@ -7,13 +7,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
    styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-   form: FormGroup;
 
-   constructor(
-      private _formBuilder: FormBuilder,
-   ) {
-      this.form = this._formBuilder.group({
-         login: ['', Validators.compose([
+   loginForm!: FormGroup;
+
+   constructor(private _formBuilder: FormBuilder) {
+   }
+
+   ngOnInit() {
+      this.loginForm = this._formBuilder.group({
+         userName: ['', Validators.compose([
             Validators.minLength(3),
             Validators.required
          ])],
@@ -24,10 +26,5 @@ export class LoginComponent implements OnInit {
       });
    }
 
-   ngOnInit() {
-   }
-
-   onSubmit(form: FormGroup) {
-
-   }
+   onSubmit(loginForm: FormGroup) {}
 }

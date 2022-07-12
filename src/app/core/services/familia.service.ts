@@ -1,19 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders} from "@angular/common/http"
-import { Observable } from "rxjs/internal/Observable";
 import { Familia } from "src/app/shared/models/familia.model";
+import { CrudService } from "./crudService.service";
+import { environment } from "src/environments/environment";
 
 @Injectable({
    providedIn:'root',
 })
-export class FamiliaService {
-   private readonly urlApi = "Url da api";
-   get headers(): HttpHeaders {
-      return new HttpHeaders().set('content-type', 'application/json',)
-   }
-   constructor(private http: HttpClient){}
+export class FamiliaService extends CrudService<Familia, number> {
+   constructor(protected _http: HttpClient) {
+      super(_http, `${environment.endpoint_api}/familia`);
+    }
 
-   public getAllFamilia(): Observable<Familia[]> {
-      return this.http.get<Familia[]>(this.urlApi)
-   }
 }

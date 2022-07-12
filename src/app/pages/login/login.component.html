@@ -1,10 +1,10 @@
-<form class="container-main" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+<form class="container-main" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
    <div class="box d-flex align-items-end">
       <div class="container">
          <div class="form-group row">
             <label for="" class="col-sm-3 col-form-label col-form-label-sm text-end">Usuário</label>
             <div class="col-sm-9">
-               <input type="text" class="form-control form-control-sm" formControlName="login">
+               <input type="text" class="form-control form-control-sm" formControlName="userName" autofocus>
             </div>
          </div>
          <div class="form-group row">
