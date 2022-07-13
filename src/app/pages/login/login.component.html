@@ -5,20 +5,12 @@
             <label for="" class="col-sm-3 col-form-label col-form-label-sm text-end">Usuário</label>
             <div class="col-sm-9">
                <input type="text" class="form-control form-control-sm" formControlName="userName" autofocus>
-               <small
-                  class="text-danger d-block " *ngIf="loginForm.get('userName')?.errors">
-                  Usuário não encontrado
-               </small>
             </div>
          </div>
          <div class="form-group row">
             <label for="inputPassword" class="col-sm-3 col-form-label col-form-label-sm text-end">Senha</label>
             <div class="col-sm-9">
                <input type="password" class="form-control form-control-sm" formControlName="password" autocomplete="on">
-               <small
-                  class="text-danger d-block " *ngIf="loginForm.get('password')?.errors">
-                  Senha invalida
-               </small>
             </div>
          </div>
 

@@ -30,6 +30,7 @@ export class DadosPessoaComponent implements OnInit {
    public tipoFamilia: Familia[] = [];
    public tipoUF: Uf[] = [];
 
+
    ngOnInit(): void {
       this.tipoCadastroServices.findAll().subscribe(
          tiposCad => {

@@ -4,11 +4,19 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CDataComponent } from 'src/app/shared/components/cData/cData.component';
 import { AdicionarEnderecoComponent } from './modals/pessoa/adicionar-endereco/adicionar-endereco.component';
 import { AdicionarFamiliaComponent } from './modals/pessoa/adicionar-familia/adicionar-familia/adicionar-familia.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { CurrencyMaskModule} from 'ng2-currency-mask';
+
+const maskConfig: Partial<IConfig> = {
+   validation: false,
+ };
 
 @NgModule({
    imports: [
       CommonModule,
-      MatDialogModule
+      MatDialogModule,
+      NgxMaskModule,
+      CurrencyMaskModule
    ],
    declarations: [
       CDataComponent,

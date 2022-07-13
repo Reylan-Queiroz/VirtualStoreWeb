@@ -10,7 +10,7 @@ const routes: Routes = [
       path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
    },
    {
-      path: 'produto/cadastro', canActivate: [AuthorizedGuard],
+      path: 'produto/cadastro', /*canActivate: [AuthorizedGuard],*/
       loadChildren: () => import('./pages/retaguarda/produto/cadastro-produto/cadastro-produto.module')
       .then(m => m.CadastroProdutoModule)
    },
