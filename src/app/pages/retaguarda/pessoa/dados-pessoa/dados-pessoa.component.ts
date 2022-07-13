@@ -4,6 +4,7 @@ import { FamiliaService } from 'src/app/core/services/familia.service';
 import { TipoCadastroService } from 'src/app/core/services/tipo-cadastro.service';
 import { UFServices } from 'src/app/core/services/uf.service';
 import { Familia } from 'src/app/shared/models/familia.model';
+import { AdicionarFamiliaComponent } from 'src/app/shared/components/modals/pessoa/adicionar-familia/adicionar-familia/adicionar-familia.component';
 import { TipoCadastro } from 'src/app/shared/models/tipoCadastro.model';
 import { Uf } from 'src/app/shared/models/uf.model';
 import { MatDialog } from '@angular/material/dialog';
@@ -14,6 +15,7 @@ import { MatDialog } from '@angular/material/dialog';
    styleUrls: ['./dados-pessoa.component.scss'],
 })
 export class DadosPessoaComponent implements OnInit {
+
    formCadPessoa!: FormGroup;
 
    constructor(
@@ -83,10 +85,10 @@ export class DadosPessoaComponent implements OnInit {
       });
    }
 
-   // openModalFamiliaEndereco(){
-   //    const dialogRef = this.matDialog.open(AdicionarFamiliaComponent, {
-   //       width: '30rem',
-   //       data: {},
-   //     });
-   //    }
+   openModalFamiliaEndereco(){
+       const dialogRef = this.matDialog.open(AdicionarFamiliaComponent, {
+         width: '30rem',
+          data: {},
+       });
+       }
 }
