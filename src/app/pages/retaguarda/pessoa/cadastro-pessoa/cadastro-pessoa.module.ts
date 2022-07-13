@@ -7,7 +7,7 @@ import { CurrencyMaskModule} from 'ng2-currency-mask';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { TabEmailComponent } from '../tabEmail/tab-email/tab-email.component';
 import { TabEnderecoComponent } from '../tabEndereco/tab-endereco/tab-endereco.component';
-import { DadosPessoaComponent } from '../dados-pessoa/dados-pessoa.component';
+import { DadosPessoaComponent } from './dados-pessoa/dados-pessoa.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
 

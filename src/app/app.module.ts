@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastroPessoaModule } from './pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module';
+import { LoginModule } from './pages/login/login.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CadastroPessoaModule } from './pages/retaguarda/pessoa/cadastro-pessoa/
       BrowserModule,
       AppRoutingModule,
       BrowserAnimationsModule,
-      CadastroPessoaModule
+      CadastroPessoaModule,
+      LoginModule
    ],
    providers: [],
    schemas: [

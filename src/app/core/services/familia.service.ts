@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders} from "@angular/common/http"
+import { HttpClient} from "@angular/common/http"
 import { Familia } from "src/app/shared/models/familia.model";
 import { CrudService } from "./crudService.service";
 import { environment } from "src/environments/environment";
