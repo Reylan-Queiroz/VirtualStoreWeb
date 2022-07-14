@@ -13,7 +13,7 @@
                                   <label for="tipo" class="col-form-label">TipoCadastro</label>
                               </div>
                               <div class="col-8">
-                                  <select type="text" id="tipo" class="form-select form-select-sm"
+                                  <select type="text" id="tipo" class="form-control form-select form-select-sm"
                                       formControlName="tipoPessoa" readonly>
                                       <option value="1" *ngFor="let tipCad of tipoCad">{{tipCad.nome}}</option>
 
@@ -30,7 +30,7 @@
                                   <label for="familia" class="col-form-label">Familia</label>
                               </div>
                               <div class="col-8">
-                                  <select type="text" id="familia" class="form-select form-select-sm"
+                                  <select type="text" id="familia" class="form-control form-select form-select-sm"
                                       formControlName="familia" readonly>
                                       <option value="1" *ngFor="let tipFamilia of tipoFamilia">{{tipFamilia.nome}}
                                   </select>
@@ -76,7 +76,7 @@
                               </div>
                               <div class="col-2"></div>
                               <div class="col-6">
-                                  <select class="form-select form-select-sm" name="" id="" formControlName="sexo"
+                                  <select class="form-control form-select form-select-sm" name="" id="" formControlName="sexo"
                                       readonly>
                                       <option value="1">MASCULINO</option>
                                       <option value="2">FEMININO</option>
@@ -178,7 +178,7 @@
                                   <label for="" class="col-form-label-sm">UF</label>
                               </div>
                               <div class="col-3">
-                                  <select name="" id="" class="form-select form-select-sm" formControlName="uf">
+                                  <select name="" id="" class="form-control form-select form-select-sm" formControlName="uf" readonly>
                                       <option value="1" *ngFor="let tipUF of tipoUF">{{tipUF.nome}}</option>
                                   </select>
                               </div>
@@ -256,8 +256,9 @@
                               <label for="" class="col-form-label">Vendedor</label>
                           </div>
                           <div class="col-8">
-                              <select class="form-select form-select-sm" readonly name="" formControlName="vendedor">
-                                  <option value="1">ADMIN</option>
+                              <select class="form-control form-select form-select-sm" readonly name="" formControlName="vendedor">
+                                  <option value="1">TODOS</option>
+                                  <option value="2">ADMIN</option>
                               </select>
                           </div>
                       </div>
@@ -269,7 +270,7 @@
                               <label for="" class="col-form-label">Crediário</label>
                           </div>
                           <div class="col-8">
-                              <select class="form-select form-select-sm" name="" id="" formControlName="crediario"
+                              <select class="form-control form-select form-select-sm" name="" id="" formControlName="crediario"
                                   readonly>
                                   <option value="1">SIM</option>
                                   <option value="2">NÃO</option>

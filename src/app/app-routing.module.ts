@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthorizedGuard } from './core/guards/authorized.guard';
+import { PrincipalComponent } from './pages/retaguarda/principal/principal.component';
 
 const routes: Routes = [
    {
@@ -17,6 +18,9 @@ const routes: Routes = [
    {
       path: 'dados-pessoa', loadChildren: () => import('./pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module')
          .then(m => m.CadastroPessoaModule)
+   },
+   {
+      path: 'principal', component: PrincipalComponent
    }
 
 ];
