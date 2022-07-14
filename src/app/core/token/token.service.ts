@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+const KEY = 'authToken';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,6 +11,7 @@ constructor() { }
 
    hasToken() {
 
+      return this.getToken();
    }
 
    setToken() {
