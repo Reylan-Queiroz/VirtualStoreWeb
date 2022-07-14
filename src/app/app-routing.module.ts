@@ -8,10 +8,11 @@ const routes: Routes = [
        path: "", pathMatch: "full", redirectTo: "login"
    },
    {
-      path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+      path: 'login', //canActivate: [AuthorizedGuard],
+       loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
    },
    {
-      path: 'produto/cadastro', /*canActivate: [AuthorizedGuard],*/
+      path: 'produto/cadastro',
       loadChildren: () => import('./pages/retaguarda/produto/cadastro-produto/cadastro-produto.module')
       .then(m => m.CadastroProdutoModule)
    },
@@ -20,7 +21,7 @@ const routes: Routes = [
          .then(m => m.CadastroPessoaModule)
    },
    {
-      path: 'principal', component: PrincipalComponent
+      path: 'user/:userName', component: PrincipalComponent
    }
 
 ];

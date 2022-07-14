@@ -21,7 +21,8 @@ const routes: Routes = [
       ReactiveFormsModule,
       FormsModule,
       RouterModule.forChild(routes),
-      HttpClientModule
+      HttpClientModule,
+      RouterModule
    ],
     exports: [
       LoginComponent,

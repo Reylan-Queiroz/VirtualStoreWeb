@@ -25,7 +25,7 @@ span {
    color: white;
 }
 
-.botão_pdv {
+.botao_pdv {
 
 }
 
@@ -42,4 +42,26 @@ span {
 .botao_estoque {
    background-color: rgb(130, 42, 173);
    color: white;
+}
+
+.botao_financeiro {
+   background-color: cadetblue;
+   color: white;
+}
+
+.botao_pagar {
+   background-color:rgb(168, 79, 212);
+   color: white;
+}
+
+.botao_receber {
+   background-color: rgb(3, 3, 109);
+   color: white;
+}
+
+footer {
+   position: fixed;
+   bottom:0;
+   left:0;
+   width: 100%;
 }
