@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  vsUser: 'vsuser',
+   vsToken: 'vstoken',
+   endpoint_api:'',
 };

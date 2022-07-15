@@ -2,18 +2,21 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TabEmailComponent } from './pages/retaguarda/pessoa/tabEmail/tab-email/tab-email.component';
-import { TabEnderecoComponent } from './pages/retaguarda/pessoa/tabEndereco/tab-endereco/tab-endereco.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CadastroPessoaModule } from './pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module';
+import { LoginModule } from './pages/login/login.module';
+
 
 @NgModule({
    declarations: [
       AppComponent,
-      TabEmailComponent,
-      TabEnderecoComponent,
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
+      BrowserAnimationsModule,
+      CadastroPessoaModule,
+      LoginModule
    ],
    providers: [],
    schemas: [

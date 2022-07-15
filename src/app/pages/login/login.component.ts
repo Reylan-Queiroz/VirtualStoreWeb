@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
    selector: 'app-login',
@@ -7,27 +9,41 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
    styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-   form: FormGroup;
+
+
+
+   loginForm!: FormGroup;
+   @ViewChild('userNameInput') userNameInput!: ElementRef<HTMLInputElement>;// obtendo referências do template para o focus
 
    constructor(
       private _formBuilder: FormBuilder,
-   ) {
-      this.form = this._formBuilder.group({
-         login: ['', Validators.compose([
-            Validators.minLength(3),
-            Validators.required
-         ])],
-         password: ['', Validators.compose([
-            Validators.minLength(1),
-            Validators.required
-         ])]
-      });
-   }
+      private authService: AuthService,
+      private router: Router
+      ) {}
 
    ngOnInit() {
+      this.loginForm = this._formBuilder.group({
+         userName: ['', Validators.required],
+         password: ['', Validators.required]
+      });
+
+
    }
 
-   onSubmit(form: FormGroup) {
+   login() {
 
+      const userName = this.loginForm.get('userName')?.value;
+      const password = this.loginForm.get('password')?.value;
+
+      this.authService.authenticate(userName, password)
+      .subscribe(() => this.router.navigate(['user', userName]),
+         err => {
+            console.log(err);
+            this.loginForm.reset();
+            this.userNameInput.nativeElement.focus();
+            alert('Dados incorreto !');
+         });
    }
+
+   onSubmit(loginForm: FormGroup) {}
 }
