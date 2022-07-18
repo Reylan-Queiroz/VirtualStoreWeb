@@ -1,4 +1,7 @@
 export class AuthenticateRequest {
-    login: string,
-    password: string
+
+   constructor(
+      public login: string,
+      public password: string
+      ) {}
 }
