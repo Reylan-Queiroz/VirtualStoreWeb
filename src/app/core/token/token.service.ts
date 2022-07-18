@@ -11,19 +11,19 @@ constructor() { }
 
    hasToken() {
 
-      return this.getToken();
+      return !!this.getToken();
    }
 
-   setToken() {
-
+   setToken(token: any) {
+      window.localStorage.setItem(KEY, token);
    }
 
    getToken() {
-
+      return window.localStorage.getItem(KEY);
    }
 
    removeToken() {
-
+      window.localStorage.removeItem(KEY);
    }
 
 }
