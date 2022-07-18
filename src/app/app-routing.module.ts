@@ -21,7 +21,7 @@ const routes: Routes = [
          .then(m => m.CadastroPessoaModule)
    },
    {
-      path: 'user/:userName', component: PrincipalComponent
+      path: 'Auth/:login', component: PrincipalComponent
    }
 
 ];
