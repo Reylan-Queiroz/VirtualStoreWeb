@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthorizedGuard } from './core/guards/authorized.guard';
-import { PrincipalComponent } from './pages/retaguarda/principal/principal.component';
+import { MainComponent} from './pages/retaguarda/main/main.component';
+import { UsuarioComponent } from './pages/retaguarda/usuario/usuario.component';
 
 const routes: Routes = [
    {
@@ -21,7 +22,10 @@ const routes: Routes = [
          .then(m => m.CadastroPessoaModule)
    },
    {
-      path: 'Auth/:login', component: PrincipalComponent
+      path: 'Auth/:login', component: MainComponent
+   },
+   {
+      path: 'usuario', component: UsuarioComponent
    }
 
 ];

@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CadastroPessoaModule } from './pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module';
+
 import { LoginModule } from './pages/login/login.module';
+import { CadastroPessoaModule } from './pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module';
+import { UsuarioModule } from './pages/retaguarda/usuario/usuario.module';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { LoginModule } from './pages/login/login.module';
       AppRoutingModule,
       BrowserAnimationsModule,
       CadastroPessoaModule,
-      LoginModule
+      LoginModule,
+      UsuarioModule,
    ],
    providers: [],
    schemas: [

@@ -1,0 +1,26 @@
+<div class="form-control shadow">
+   <button
+     class="btn btn-outline-secondary m-2"
+
+     type="button">
+     <i class="fas fa-plus"></i>
+
+     Novo
+   </button>
+   <button
+     class="btn btn-outline-secondary m-2"
+     type="button"
+     data-bs-target="#nav-localizar"
+     aria-controls="nav-localizar">
+     <i class="fas fa-search"></i>
+
+     Localizar
+   </button>
+   <nav>
+     <div class="nav nav-tabs" id="nav-tab" role="tablist">
+     </div>
+   </nav>
+   <div class="tab-content" id="nav-tabContent">
+     <app-navbar [usuario]='usuario'></app-navbar>
+   </div>
+ </div>
