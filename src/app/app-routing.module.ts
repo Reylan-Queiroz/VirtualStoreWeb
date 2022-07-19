@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthorizedGuard } from './core/guards/authorized.guard';
+import { EstoqueComponent } from './pages/retaguarda/estoque/estoque.component';
 import { MainComponent} from './pages/retaguarda/main/main.component';
 import { UsuarioComponent } from './pages/retaguarda/usuario/usuario.component';
 
@@ -29,6 +30,9 @@ const routes: Routes = [
    {
       path: 'usuario',
       component: UsuarioComponent
+   },
+   {
+      path: 'estoque', component: EstoqueComponent
    }
 
 ];
