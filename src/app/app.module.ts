@@ -21,7 +21,7 @@ import { ComponentsModule } from './shared/components/components.module';
       CadastroPessoaModule,
       LoginModule,
       UsuarioModule,
-      ComponentsModule
+      ComponentsModule,
    ],
    providers: [],
    schemas: [

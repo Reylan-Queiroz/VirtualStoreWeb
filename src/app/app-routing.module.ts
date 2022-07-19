@@ -9,7 +9,7 @@ const routes: Routes = [
        path: "", pathMatch: "full", redirectTo: "login"
    },
    {
-      path: 'login', //canActivate: [AuthorizedGuard],
+      path: 'login',
        loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
    },
    {
@@ -18,14 +18,17 @@ const routes: Routes = [
       .then(m => m.CadastroProdutoModule)
    },
    {
-      path: 'dados-pessoa', loadChildren: () => import('./pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module')
+      path: 'dados-pessoa',
+         loadChildren: () => import('./pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module')
          .then(m => m.CadastroPessoaModule)
    },
    {
-      path: 'Auth/:login', component: MainComponent
+      path: 'Auth/:login',
+      component: MainComponent
    },
    {
-      path: 'usuario', component: UsuarioComponent
+      path: 'usuario',
+      component: UsuarioComponent
    }
 
 ];
