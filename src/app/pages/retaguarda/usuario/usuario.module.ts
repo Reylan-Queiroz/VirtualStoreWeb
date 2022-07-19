@@ -10,6 +10,7 @@ import { PermissoesComponent } from './permissoes/permissoes.component';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { PrincipalComponent } from './principal/principal.component';
 import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
+import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
       PrincipalComponent,
       LocalizarComponent,
       PermissoesComponent,
-      DadosUsuarioComponent
+      DadosUsuarioComponent,
+      NavbarComponent
    ],
    imports: [
       CommonModule,
@@ -37,6 +39,7 @@ const routes: Routes = [
    ],
     exports: [
       UsuarioComponent,
+      PrincipalComponent
     ],
 })
 export class UsuarioModule { }

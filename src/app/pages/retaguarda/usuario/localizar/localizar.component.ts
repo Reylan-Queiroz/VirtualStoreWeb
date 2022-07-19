@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FuncoesService } from 'src/app/core/services/funcoes.service';
-import { UsuarioSevice } from 'src/app/core/services/usuarioService';
+import { UsuarioSevice } from 'src/app/core/services/usuario.service';
 import { Funcoes } from 'src/app/shared/models/funcoes.model';
 import { Usuario } from 'src/app/shared/models/usuario.model';
 
@@ -22,7 +22,7 @@ export class LocalizarComponent implements OnInit {
       ){ }
 
 ngOnInit() {
-   //this.functions = new  Funcoes();
+   this.functions = new  Funcoes(1, "user");
    this._usuarioService.findAll().subscribe(
        user => {
            this.users = user;

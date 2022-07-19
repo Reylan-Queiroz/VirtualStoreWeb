@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { EmpregadoServices } from 'src/app/core/services/empregadoService';
+import { EmpregadoServices } from 'src/app/core/services/empregado.service';
 import { EmpresaService } from 'src/app/core/services/empresa.Service';
 import { FuncoesService } from 'src/app/core/services/funcoes.service';
 import { Empregado } from 'src/app/shared/models/empregado.model';

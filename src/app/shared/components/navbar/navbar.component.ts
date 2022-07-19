@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalizarComponent } from 'src/app/pages/retaguarda/usuario/localizar/localizar.component';
+import { PermissoesComponent } from 'src/app/pages/retaguarda/usuario/permissoes/permissoes.component';
+import { PrincipalComponent } from 'src/app/pages/retaguarda/usuario/principal/principal.component';
 import { NavbarModel } from '../../models/navbar.model';
 import { Usuario } from '../../models/usuario.model';
 
@@ -28,13 +31,13 @@ export class NavbarComponent implements OnInit {
 
    ngOnInit() {
       // this.returnUrl = this.activatedRouter.snapshot.queryParams['returnUrl'];
-      const tab1 = new NavbarModel();
-      const tab2 = new NavbarModel();
-      const tab3 = new NavbarModel();
+      const tab1 = new NavbarModel(0, "principal", true, PrincipalComponent);
+      const tab2 = new NavbarModel(2, "permissao", false, PermissoesComponent);
+      const tab3 = new NavbarModel(3, "localizar", false, LocalizarComponent);
 
-      tab1.setItem(1, 'Principal', true, principalComponent);
-      tab2.setItem(2, 'Permissões', false, permissoesComponent);
-      tab3.setItem(3, 'Localizar', false, principalComponent);
+      tab1.setItem(1, 'Principal', true, PrincipalComponent);
+      tab2.setItem(2, 'Permissões', false, PermissoesComponent);
+      tab3.setItem(3, 'Localizar', false, LocalizarComponent);
 
       this.Tabs.push(tab1, tab2, tab3);
    }

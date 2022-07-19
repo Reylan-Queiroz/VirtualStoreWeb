@@ -24,12 +24,10 @@ const maskConfig: Partial<IConfig> = {
       CDataComponent,
       AdicionarEnderecoComponent,
       AdicionarFamiliaComponent,
-      NavbarComponent,
    ],
    exports: [
       CDataComponent,
       AdicionarEnderecoComponent,
-      NavbarComponent
    ]
 })
 export class ComponentsModule { }

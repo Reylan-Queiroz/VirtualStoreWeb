@@ -11,6 +11,6 @@
    <div *ngFor="let item of Tabs; let i = index;"  class="tab-pane fade" id="tab-{{i}}" role="tabpanel">
      <app-principal [usuario]="usuario"  *ngIf="i == 0 " ></app-principal>
      <app-permissoes [usuario]='usuario'  *ngIf="i == 1" ></app-permissoes>
-     <app-localizar  [usuario]='usuario' (newItem)="addItem($event)" *ngIf="i == 2" ></app-localizar>
+     <app-localizar  [usuario]='usuario' (newItem)="addItem($event)" *ngIf="i == 2" ></app-localizar>-->
    </div>
  </div>

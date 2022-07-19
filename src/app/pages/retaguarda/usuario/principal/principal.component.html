@@ -94,8 +94,8 @@
              Operador de caixa
            </label>
          </div>
-         <label for="inputCodEmpresa" class="form-label my-2">Empresa</label>
-         <select
+         <label for="inputCodEmpresa" class="form-label my-2"></label>
+         <select *ngIf="false"
            id="inputCodEmpresa"
            [(ngModel)]="usuario.CodigoEmpresa"
            class="form-select"
@@ -104,8 +104,8 @@
              {{ c.nome }}
            </option>
          </select>
-         <label for="inputJpb" class="form-label my-2">Empregado</label>
-         <select
+         <label for="inputJpb" class="form-label my-2"></label>
+         <select *ngIf="false"
            id="inputJpb"
            [(ngModel)]="usuario.CodigoEmpregado"
            class="form-select"

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './pages/login/login.module';
 import { CadastroPessoaModule } from './pages/retaguarda/pessoa/cadastro-pessoa/cadastro-pessoa.module';
 import { UsuarioModule } from './pages/retaguarda/usuario/usuario.module';
+import { ComponentsModule } from './shared/components/components.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { UsuarioModule } from './pages/retaguarda/usuario/usuario.module';
       CadastroPessoaModule,
       LoginModule,
       UsuarioModule,
+      ComponentsModule
    ],
    providers: [],
    schemas: [
