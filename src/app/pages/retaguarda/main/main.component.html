@@ -17,7 +17,7 @@
             </a>
          </div>
          <div class="botoes">
-            <a href="#" class="btn botao_usuario botoes_grande">
+            <a [routerLink]="['/usuario']" class="btn botao_usuario botoes_grande">
                <span class="material-symbols-outlined"> group_add </span>
                Usuário</a
             >
@@ -35,7 +35,7 @@
             >
          </div>
          <div class="botoes">
-            <a href="#" class="btn botao_estoque botoes_grande">
+            <a [routerLink]="['/estoque']" class="btn botao_estoque botoes_grande">
                <span class="material-symbols-outlined">
                   shopping_cart_checkout
                </span>
@@ -71,8 +71,17 @@
 <hr>
 
 <footer>
+  <div class="container-flex">
    <hr>
-      <p>Empresa:</p>
+   <div class="row">
+      <div class="col-2 ms-3">
+         <p>Empresa:</p>
+      </div>
+      <div class="col-7">
+         <p>Usuário:</p>
+      </div>
+   </div>
+  </div>
 </footer>
 
 

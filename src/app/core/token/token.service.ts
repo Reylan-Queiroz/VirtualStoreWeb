@@ -1,3 +1,4 @@
+import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
 const KEY = 'authToken';

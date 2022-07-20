@@ -11,7 +11,7 @@ import { TabEnderecoComponent } from './tab-endereco/tab-endereco.component';
 import { DadosPessoaComponent } from './dados-pessoa/dados-pessoa.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
-import { PrincipalComponent } from '../../principal/principal.component';
+import { MainComponent } from '../../main/main.component';
 
 const maskConfig: Partial<IConfig> = {
    validation: false,
@@ -39,7 +39,7 @@ const routes: Routes = [
       TabEmailComponent,
       TabEnderecoComponent,
       DadosPessoaComponent,
-      PrincipalComponent
+      MainComponent
    ],
    exports: [
       CadastroPessoaComponent,

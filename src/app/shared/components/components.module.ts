@@ -6,6 +6,8 @@ import { AdicionarEnderecoComponent } from './modals/pessoa/adicionar-endereco/a
 import { AdicionarFamiliaComponent } from './modals/pessoa/adicionar-familia/adicionar-familia/adicionar-familia.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { CurrencyMaskModule} from 'ng2-currency-mask';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 const maskConfig: Partial<IConfig> = {
    validation: false,
@@ -16,16 +18,16 @@ const maskConfig: Partial<IConfig> = {
       CommonModule,
       MatDialogModule,
       NgxMaskModule,
-      CurrencyMaskModule
+      CurrencyMaskModule,
    ],
    declarations: [
       CDataComponent,
       AdicionarEnderecoComponent,
-      AdicionarFamiliaComponent
+      AdicionarFamiliaComponent,
    ],
    exports: [
       CDataComponent,
-      AdicionarEnderecoComponent
+      AdicionarEnderecoComponent,
    ]
 })
 export class ComponentsModule { }
