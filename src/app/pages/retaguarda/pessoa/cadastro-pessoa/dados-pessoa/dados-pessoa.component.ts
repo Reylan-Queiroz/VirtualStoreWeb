@@ -8,6 +8,7 @@ import { Uf } from 'src/app/shared/models/uf.model';
 import { MatDialog } from '@angular/material/dialog';
 import { TipoCadastroService } from 'src/app/core/services/tipo-cadastro.service';
 import { UFServices } from 'src/app/core/services/uf.service';
+import { UsuarioSevice } from 'src/app/core/services/usuario.service';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class DadosPessoaComponent implements OnInit {
       private familiaServices: FamiliaService,
       private tipoCadastroServices: TipoCadastroService,
       private ufService: UFServices,
+      private usuarioService: UsuarioSevice,
       private matDialog: MatDialog
    ) {}
 

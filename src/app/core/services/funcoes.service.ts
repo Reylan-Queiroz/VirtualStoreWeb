@@ -9,7 +9,7 @@ import { CrudService } from './crudService.service';
 })
 export class FuncoesService extends CrudService<Funcoes, number> {
    constructor(protected _http: HttpClient) {
-      super(_http, `${environment.endpoint_api}/funcoes`);
+      super(_http, `${environment.endpoint_api} /funcoes`);
     }
 
 }

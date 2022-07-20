@@ -44,6 +44,10 @@ export class Security {
          return false;
    }
 
+   public static getDataBaseName(){
+      return window.localStorage.getItem("databaseName");
+   }
+
    // public static isInRole(roles: Role[]): boolean {
    //    const user = this.getUser();
 

@@ -26,7 +26,8 @@ ngOnInit() {
    this._usuarioService.findAll().subscribe(
        user => {
            this.users = user;
-       }
+       },error=> console.log(error)
+
    )
    this.GetByFuncId(1);
 }
@@ -40,6 +41,7 @@ public GetByFuncId(codigo: number): Funcoes | undefined{
    console.log(this.functions)
    return this.functions;
 }
+
 GetUser(usuarioSelect: Usuario ){
    this.newItem.emit(usuarioSelect);
    this.usuario = usuarioSelect;
