@@ -7,7 +7,7 @@ const header = new HttpHeaders().set(
    'Authorization',
    `Bearer ${Security.getToken()}`
 ).set(
-   '',
+   'databaseName', Security.getDataBaseName()
 );
 
 export abstract class CrudService<T, ID> implements CrudOperations<T, ID> {

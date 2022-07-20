@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { TokenService } from 'src/app/core/token/token.service';
 import { AuthenticateRequest } from 'src/app/shared/models/authenticateRequest.model';
+import { Security } from 'src/app/shared/utils/security.util';
 
 @Component({
    selector: 'app-login',
@@ -40,10 +41,10 @@ export class LoginComponent implements OnInit {
       const password = this.loginForm.get('password')?.value;
       const dataBase = this.loginForm.get('dataBase')?.value
 
-      this.tokenService.setToken("databaseName", dataBase)
+      localStorage.setItem("databaseName", dataBase)
 
       this.authService.authenticate(new AuthenticateRequest(login, password), dataBase)
-      .subscribe(() => this.router.navigate(['Auth', login]),
+      .subscribe((response: any) =>{ this.router.navigate(['Auth', login]);Security.set(response.usuario,response.token)},
          err => {
             console.log(err);
             this.loginForm.reset();

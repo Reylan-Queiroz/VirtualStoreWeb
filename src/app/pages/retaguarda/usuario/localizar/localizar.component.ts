@@ -23,8 +23,10 @@ export class LocalizarComponent implements OnInit {
 
 ngOnInit() {
    this.functions = new  Funcoes(1, "user");
+   debugger
    this._usuarioService.findAll().subscribe(
        user => {
+         console.log(user)
            this.users = user;
        },error=> console.log(error)
 
