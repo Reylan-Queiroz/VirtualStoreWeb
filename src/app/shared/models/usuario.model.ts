@@ -1,35 +1,36 @@
 export class Usuario {
-
+   public Codigo: number = 0;
+   public CodigoIdentificacao: number = 0;
+   public Nome: string = "";
+   public CodPessoa: number = 0;
+   public Senha: string = "";
+   public DescontoMax: number = 0;
+   public Comissao: number = 0;
+   public CadUsuario: boolean = false;
+   public BloqueiaCancelaProd: boolean = false;
+   public CodigoFuncao: number = 0;
+   public CodigoEmpresa: number = 0;
+   public CodigoEmpregado: number = 0;
+   public MovimentaEstoqueES: boolean = false;
+   public VerQuantiaCaixa: boolean = false;
+   public devolverProduto: boolean = false;
+   public PDV_EstornarRecbto: boolean = false;
+   public PDV_CancelarPedido: boolean = false;
+   public PDV_PermitirOutrasSaidas: boolean = false;
+   public PDV_ModificarDescontoSistema: boolean = false;
+   public PDV_PermitirTransfProduto: boolean = false;
+   public PDV_CriarOrcamento: boolean = false;
+   public Ret_VerCusto: boolean = false;
+   public Ret_AlteraTabPreco: boolean = false;
+   public AcessaFinanceiro: boolean = false;
+   public AlteraProduto: boolean = false;
+   public PDV_PermitirVendaClienteComTituloAtrasado: boolean = false;
+   public PDV_PermitirVendaClienteSemLimiteCredito: boolean = false;
+   public Meta: number = 0;
+   public OperadorCaixa: boolean = false;
+   public AcessarRetaguarda: boolean = false;
    constructor(
-   public Codigo: number,
-   public CodigoIdentificacao: number,
-   public Nome: string,
-   public CodPessoa: number,
-   public Senha: string,
-   public DescontoMax: number,
-   public Comissao: number,
-   public CadUsuario: boolean,
-   public BloqueiaCancelaProd: boolean,
-   public CodigoFuncao: number,
-   public CodigoEmpresa: number,
-   public CodigoEmpregado: number,
-   public MovimentaEstoqueES: boolean,
-   public VerQuantiaCaixa: boolean,
-   public devolverProduto: boolean,
-   public PDV_EstornarRecbto: boolean,
-   public PDV_CancelarPedido: boolean,
-   public PDV_PermitirOutrasSaidas: boolean,
-   public PDV_ModificarDescontoSistema: boolean,
-   public PDV_PermitirTransfProduto: boolean,
-   public PDV_CriarOrcamento: boolean,
-   public Ret_VerCusto: boolean,
-   public Ret_AlteraTabPreco: boolean,
-   public AcessaFinanceiro: boolean,
-   public AlteraProduto: boolean,
-   public PDV_PermitirVendaClienteComTituloAtrasado: boolean,
-   public PDV_PermitirVendaClienteSemLimiteCredito: boolean,
-   public Meta: number,
-   public OperadorCaixa: boolean,
-   public AcessarRetaguarda: boolean,
    ) {}
+
+
 }

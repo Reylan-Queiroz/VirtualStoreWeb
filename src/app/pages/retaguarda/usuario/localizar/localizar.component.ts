@@ -1,54 +1,68 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+   AfterViewInit,
+   Component,
+   EventEmitter,
+   Input,
+   OnInit,
+   Output,
+} from '@angular/core';
 import { FuncoesService } from 'src/app/core/services/funcoes.service';
 import { UsuarioSevice } from 'src/app/core/services/usuario.service';
 import { Funcoes } from 'src/app/shared/models/funcoes.model';
 import { Usuario } from 'src/app/shared/models/usuario.model';
 
 @Component({
-  selector: 'app-localizar',
-  templateUrl: './localizar.component.html',
-  styleUrls: ['./localizar.component.scss']
+   selector: 'app-localizar',
+   templateUrl: './localizar.component.html',
+   styleUrls: ['./localizar.component.scss'],
 })
-export class LocalizarComponent implements OnInit {
-
+export class LocalizarComponent implements OnInit, AfterViewInit {
    @Output() newItem = new EventEmitter<Usuario>();
-   @Input() usuario!:Usuario;
-   public users: Usuario[]=[];
+   @Input() usuario!: Usuario;
+   public users: any[] = [];
    public functions: Funcoes | undefined;
 
    constructor(
       private _usuarioService: UsuarioSevice,
-      private _functionService: FuncoesService
-      ){ }
+      private _functionService: FuncoesService,
+   ) {}
 
-ngOnInit() {
-   this.functions = new  Funcoes(1, "user");
-   debugger
-   this._usuarioService.findAll().subscribe(
-       user => {
-         console.log(user)
-           this.users = user;
-       },error=> console.log(error)
+   async ngAfterViewInit() {}
 
-   )
-   this.GetByFuncId(1);
-}
+   async ngOnInit() {
+      this.functions = new Funcoes(1, 'user');
 
-public GetByFuncId(codigo: number): Funcoes | undefined{
-   this._functionService.findAll().subscribe(
-       funcs => {
-           this.functions = funcs.find(f => f.Codigo == codigo);
-       }
-   )
-   console.log(this.functions)
-   return this.functions;
-}
+      await this.load();
 
-GetUser(usuarioSelect: Usuario ){
-   this.newItem.emit(usuarioSelect);
-   this.usuario = usuarioSelect;
-   document.getElementById("btn_0")?.click();
-   console.log(usuarioSelect)
- }
+      this.GetByFuncId(1);
+   }
+
+   async load() {
+      await this._usuarioService
+         .findAll()
+         .toPromise()
+         .then((res) => (this.users = res));
+   }
+
+   public GetByFuncId(codigo: number): Funcoes | undefined {
+      this._functionService.findAll().subscribe((funcs) => {
+         this.functions = funcs.find((f) => f.Codigo == codigo);
+      });
+      //console.log(this.functions)
+      return this.functions;
+   }
+
+   GetUser(usuarioSelect: Usuario) {
+      this.newItem.emit(usuarioSelect);
+      this.usuario = usuarioSelect;
+      document.getElementById('btn_0')?.click();
+      console.log(usuarioSelect);
+   }
+
+   remove() {
+      this._usuarioService
+      .update(0,this.usuario)
+      .subscribe(() => this.users)// didatica não funciona
+   }
 
 }

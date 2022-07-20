@@ -14,7 +14,7 @@ import { Usuario } from 'src/app/shared/models/usuario.model';
 })
 export class PrincipalComponent implements OnInit {
 
-   @Input() usuario!:Usuario;
+   @Input() usuario: Usuario = new Usuario(); // = new Usuario(0,0,"",0,"",0,0,false,false,0,0,0,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,0,false,false) ;
    public funcoes: Funcoes[]=[];
    public company: Empresa[]=[];
    public job: Empregado[]=[];
@@ -34,7 +34,7 @@ export class PrincipalComponent implements OnInit {
            this.funcoes = functions;
        },
        e => {
-         console.log(e.error)
+         console.log(e)
        }
      ),
 
@@ -44,7 +44,7 @@ export class PrincipalComponent implements OnInit {
            this.company = empresas
        },
        e => {
-         console.log(e.error);
+         console.log(e);
        }
      ),
      this.empregadoService.findAll()
@@ -54,7 +54,7 @@ export class PrincipalComponent implements OnInit {
 
        },
        e => {
-         console.log(e.error);
+         console.log(e);
        }
      )
 }

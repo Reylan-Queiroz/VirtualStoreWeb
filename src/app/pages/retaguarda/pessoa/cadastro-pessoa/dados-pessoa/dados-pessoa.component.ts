@@ -82,7 +82,7 @@ export class DadosPessoaComponent implements OnInit {
          comercial: [''],
          celular1: [''],
          celular2: [''],
-         Vendedor: [''],
+         vendedor: [''],
          crediario: [''],
          limiteCred: [''],
          observacao: [''],
