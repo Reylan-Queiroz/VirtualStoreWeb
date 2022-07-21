@@ -1,0 +1,44 @@
+<div class="container">
+   <div class="section">
+      <div class="botoes">
+         <button
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            (click)="openModalAdicionarEndereco()"
+         >
+            Adicionar
+         </button>
+
+         <button class="btn btn-danger">Excluir</button>
+
+         <button class="btn btn-warning">Alterar</button>
+      </div>
+
+      <table class="table table-bordered mt-3">
+         <thead>
+            <tr>
+               <th scope="col">Tipo</th>
+               <th scope="col">Endereço</th>
+               <th scope="col">Numero</th>
+               <th scope="col">PontoRef</th>
+               <th scope="col">Bairro</th>
+               <th scope="col">Cep</th>
+               <th scope="col">Cidade</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let addEnde of addEndereco">
+               <td>{{addEnde.tipo}}</td>
+               <td>{{addEnde.endereco}}</td>
+               <td>{{addEnde.numero}}</td>
+               <td>{{addEnde.pontoRef}}</td>
+               <td>{{addEnde.bairro}}</td>
+               <td>{{addEnde.cep}}</td>
+               <td>{{addEnde.cidade}}</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+

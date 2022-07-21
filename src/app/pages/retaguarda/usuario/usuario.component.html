@@ -1,0 +1,31 @@
+<div class="container mt-3 shadow p-3 rounded ">
+   <div class="row">
+      <app-cData class="mb-3"></app-cData>
+      <div class="col-12">
+         <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+               <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#dadosClientes" role="tab" aria-selected="true">Principal</button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#endereco" role="tab" aria-selected="false">Permissões</button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#email" role="tab" aria-selected="false">Localizar</button>
+            </li>
+         </ul>
+         <div class="tab-content">
+            <div class="tab-pane fade show active" id="dadosClientes" role="tabpanel">
+               <app-principal [usuario]="user"></app-principal>
+            </div>
+            <div class="tab-pane fade" id="endereco" role="tabpanel">
+               <app-permissoes [usuario]="user"></app-permissoes>
+            </div>
+            <div class="tab-pane fade" id="email" role="tabpanel">
+               <app-localizar (newItem)="receberUser($event)"></app-localizar>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+

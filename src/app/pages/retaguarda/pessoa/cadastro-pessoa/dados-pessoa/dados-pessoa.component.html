@@ -1,0 +1,313 @@
+<div class="container">
+   <div class="section">
+
+      <h5>Dados do cliente</h5>
+
+      <form action="" [formGroup]="formCadPessoa">
+          <div class="row" aria-disabled="true">
+              <div class="col-8">
+                  <div class="row">
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="tipo" class="col-form-label">TipoCadastro</label>
+                              </div>
+                              <div class="col-8">
+                                  <select type="text" id="tipo" class="form-control form-select form-select-sm"
+                                      formControlName="tipoCadastro" readonly>
+                                      <option value="1" *ngFor="let tipCad of tipoCad">{{tipCad.nome}}</option>
+
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-6"></div>
+
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="familia" class="col-form-label">Familia</label>
+                              </div>
+                              <div class="col-8">
+                                  <select type="text" id="familia" class="form-control form-select form-select-sm"
+                                      formControlName="familia" readonly>
+                                      <option value="1" *ngFor="let tipFamilia of tipoFamilia">{{tipFamilia.nome}}
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-1 mt-2">
+                          <button class="btn btn-outline-dark form-control form-control-sm btn-sm"
+                           (click)="openModalFamiliaEndereco()">
+                              +
+                          </button>
+                      </div>
+                      <div class="col-5"></div>
+
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="cpf/cnpj" class="col-form-label">CPF</label>
+                              </div>
+                              <div class="col-6">
+                                  <input type="text" id="cpf/cnpj" class="form-control form-control-sm" formControlName="cpf"
+                                  mask="CPF_CNPJ"  >
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-6"></div>
+
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="rg" class="col-form-label">RG</label>
+                              </div>
+                              <div class="col-6">
+                                  <input type="number" id="rg" class="form-control form-control-sm"
+                                      formControlName="rg">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-6 mt-2">
+                          <div class="row text-end">
+                              <div class="col-4">
+                                  <label for="" class="col-form-label-sm" readonly>SEXO</label>
+                              </div>
+                              <div class="col-2"></div>
+                              <div class="col-6">
+                                  <select class="form-control form-select form-select-sm" name="" id="" formControlName="sexo"
+                                      readonly>
+                                      <option value="1">MASCULINO</option>
+                                      <option value="2">FEMININO</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-12 mt-2">
+                          <div class="row">
+                              <div class="col-2">
+                                  <label for="" class="col-form-label-sm">Nome</label>
+                              </div>
+                              <div class="col-10">
+                                  <input type="text" class="form-control form-control-sm" formControlName="nome">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="" class="col-form-label">Apelido</label>
+                              </div>
+                              <div class="col-8">
+                                  <input type="text" class="form-control form-control-sm" formControlName="apelido">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-6 mt-2 form-group">
+                          <div class="row text-end">
+                              <div class="col-4">
+                                  <label for="" class="col-form-label-sm">Data Nasc</label>
+                              </div>
+                              <div class="col-2"></div>
+                              <div class="col-6">
+                                  <input type="date" class="form-control form-control-sm" formControlName="dataNacimento">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="" class="col-form-label">Endereço</label>
+                              </div>
+                              <div class="col-8">
+                                  <input type="text" class="form-control form-control-sm" formControlName="endereco">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-6 mt-2">
+                          <div class="row text-end">
+                              <div class="col-9">
+                                  <label for="" class="col-form-label-sm">Nº</label>
+                              </div>
+                              <div class="col-3">
+                                  <input type="number" class="form-control form-control-sm" formControlName="numero">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-12 mt-2">
+                          <div class="row">
+                              <div class="col-2">
+                                  <label for="" class="col-form-label-sm">Ponto Ref.</label>
+                              </div>
+                              <div class="col-10">
+                                  <input type="text" class="form-control form-control-sm" formControlName="pontoRef">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-12 mt-2">
+                          <div class="row">
+                              <div class="col-2">
+                                  <label for="" class="col-form-label-sm">Bairro</label>
+                              </div>
+                              <div class="col-10">
+                                  <input type="text" class="form-control form-control-sm" formControlName="bairro">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-6 mt-2">
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="" class="col-form-label">CEP</label>
+                              </div>
+                              <div class="col-6">
+                                  <input type="text" class="form-control form-control-sm" formControlName="cep"
+                                  mask=" 00000-000" prefix="  " [showMaskTyped]="true">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-6 mt-2">
+                          <div class="row text-end">
+                              <div class="col-9">
+                                  <label for="" class="col-form-label-sm">UF</label>
+                              </div>
+                              <div class="col-3">
+                                  <select name="" id="" class="form-control form-select form-select-sm" formControlName="uf" readonly>
+                                      <option value="1" *ngFor="let tipUF of tipoUF">{{tipUF.nome}}</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-12 mt-1">
+                          <div class="row">
+                              <div class="col-2">
+                                  <label for="" class="col-form-label-sm">Cidade</label>
+                              </div>
+                              <div class="col-10">
+                                  <input type="text" class="form-control form-control-sm" formControlName="cidade">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="col-4">
+                  <div class="col-12 mt-1">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label">Residencial</label>
+                          </div>
+                          <div class="col-8">
+                              <input type="tel" class="form-control form-control-sm" formControlName="residente"
+                              mask="(00) 0000-0000" prefix="  " [showMaskTyped]="true">
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label">Comercial</label>
+                          </div>
+                          <div class="col-8">
+                              <input type="tel" class="form-control form-control-sm" formControlName="comercial"
+                              mask="(00) 0000-0000" prefix="  " [showMaskTyped]="true">
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label">Celular</label>
+                          </div>
+                          <div class="col-8">
+                              <input type="tel" class="form-control form-control-sm" formControlName="celular1"
+                              mask="(00) 00000-0000" prefix="  " [showMaskTyped]="true" >
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label">Celular</label>
+                          </div>
+                          <div class="col-8">
+                              <input type="tel" class="form-control form-control-sm" formControlName="celular2"
+                              mask="(00) 00000-0000" prefix="  " [showMaskTyped]="true">
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-5"></div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label">Vendedor</label>
+                          </div>
+                          <div class="col-8">
+                              <select class="form-control form-select form-select-sm" readonly name="" formControlName="vendedor">
+                                  <option value="1">TODOS</option>
+                                  <option value="2">ADMIN</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label">Crediário</label>
+                          </div>
+                          <div class="col-8">
+                              <select class="form-control form-select form-select-sm" name="" id="" formControlName="crediario"
+                                  readonly>
+                                  <option value="1">SIM</option>
+                                  <option value="2">NÃO</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-6">
+                              <label for="" class="col-form-label">Limite Credito</label>
+                          </div>
+                          <div class="col-2"></div>
+                          <div class="col-4">
+                              <input type="text" class="form-control form-control-sm" formControlName="limiteCred"
+                              >
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mt-2">
+                      <div class="row">
+                          <div class="col-4">
+                              <label for="" class="col-form-label
+                              ">Observação</label>
+                          </div>
+                          <div class="col-8 mb-1">
+                              <textarea class="form-control" name="" id="" cols="10" rows="4"
+                                  formControlName="observacao">
+
+                              </textarea>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>

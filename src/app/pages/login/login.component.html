@@ -1,10 +1,10 @@
-<form class="container-main" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+<form class="container-main" [formGroup]="loginForm" (submit)="login()">
    <div class="box d-flex align-items-end">
       <div class="container">
          <div class="form-group row">
             <label for="" class="col-sm-3 col-form-label col-form-label-sm text-end">Usuário</label>
             <div class="col-sm-9">
-               <input type="text" class="form-control form-control-sm" formControlName="login">
+               <input #userNameInput type="text" class="form-control form-control-sm" formControlName="login" autofocus>
             </div>
          </div>
          <div class="form-group row">
@@ -13,8 +13,14 @@
                <input type="password" class="form-control form-control-sm" formControlName="password" autocomplete="on">
             </div>
          </div>
+         <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label col-form-label-sm text-end" >Database</label>
+            <div class="col-sm-6">
+               <input type="text" class="form-control from-control-sm" formControlName="dataBase">
+            </div>
+         </div>
 
-         <button type="submit" class="d-none"></button>
+         <button type="submit" [disabled]="loginForm.invalid" class="d-none"></button>
       </div>
    </div>
 </form>

@@ -1,0 +1,71 @@
+.botoes, .btn {
+   display: flex;
+}
+
+.navbar {
+   margin-top: 13px;
+}
+
+span {
+   margin-right: 5px;
+}
+
+.botoes_grande {
+   width: 150px;
+   height: 50px;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.botoes_pequeno {
+   height: 50px;
+   justify-content: center;
+   align-items: center;
+}
+
+.botao_central {
+   background-color: rgb(1, 111, 255);
+   color: white;
+}
+
+.botao_pdv {
+
+}
+
+.botao_usuario {
+   background-color: cadetblue;
+   color: white;
+}
+
+.botao_produto {
+   background-color: rgb(30, 30, 255);
+   color: white;
+}
+
+.botao_estoque {
+   background-color: rgb(130, 42, 173);
+   color: white;
+}
+
+.botao_financeiro {
+   background-color: cadetblue;
+   color: white;
+}
+
+.botao_pagar {
+   background-color:rgb(168, 79, 212);
+   color: white;
+}
+
+.botao_receber {
+   background-color: rgb(3, 3, 109);
+   color: white;
+}
+
+footer {
+   position: fixed;
+   bottom:0;
+   left:0;
+   width: 100%;
+}
