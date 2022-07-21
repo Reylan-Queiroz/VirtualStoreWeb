@@ -12,6 +12,12 @@ import { PrincipalComponent } from './principal/principal.component';
 import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 
 const routes: Routes = [
    {
@@ -27,7 +33,8 @@ const routes: Routes = [
       LocalizarComponent,
       PermissoesComponent,
       DadosUsuarioComponent,
-      NavbarComponent
+      NavbarComponent,
+
    ],
    imports: [
       CommonModule,
@@ -35,7 +42,13 @@ const routes: Routes = [
       FormsModule,
       RouterModule.forChild(routes),
       HttpClientModule,
-      ComponentsModule
+      ComponentsModule,
+      MatFormFieldModule,
+      MatPaginatorModule,
+      MatTableModule,
+      MatInputModule,
+      MatSortModule,
+      MatRippleModule
    ],
     exports: [
       UsuarioComponent,

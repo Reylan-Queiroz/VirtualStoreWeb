@@ -46,7 +46,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.VerQuantiaCaixa"
+             [(ngModel)]="usuario.verQuantiaCaixa"
              #VerQuantiaCaixa="ngModel"
              id="PermVisuSaldoCaixa"/>
            <label class="form-check-label" for="PermVisuSaldoCaixa">Permitir visualizar saldo do caixa</label>
@@ -56,7 +56,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_EstornarRecbto"
+             [(ngModel)]="usuario.pDV_EstornarRecbto"
              #PDV_EstornarRecbto="ngModel"
              id="PermRealNotaDevo"/>
            <label class="form-check-label" for="PermRealNotaDevo">Permitir realizar nota de devolução</label>
@@ -65,7 +65,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_PermitirOutrasSaidas"
+             [(ngModel)]="usuario.pDV_PermitirOutrasSaidas"
              #PDV_PermitirOutrasSaidas="ngModel"
              id="PermRelSaida"/>
            <label class="form-check-label" for="PermRelSaida">Permitir realizar outras saidas</label>
@@ -74,7 +74,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_CriarOrcamento"
+             [(ngModel)]="usuario.pDV_CriarOrcamento"
              #PDV_CriarOrcamento="ngModel"
              id="PermRealOrc"/>
            <label class="form-check-label" for="PermRealOrc">Permitir realizar orçamento</label>
@@ -85,7 +85,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_CancelarPedido"
+             [(ngModel)]="usuario.pDV_CancelarPedido"
              #PDV_CancelarPedido="ngModel"
              id="PermCancNota"/>
            <label class="form-check-label" for="PermCancNota">Permitir o cancelamento de nota/pedido</label>
@@ -94,7 +94,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_ModificarDescontoSistema"
+             [(ngModel)]="usuario.pDV_ModificarDescontoSistema"
              #PDV_ModificarDescontoSistema="ngModel"
              id="AltDescDadoSis"/>
            <label class="form-check-label" for="AltDescDadoSis">Alterar desconto dado pelo sistema</label>
@@ -104,7 +104,7 @@
              type="checkbox"
              class="form-check-input"
              [(ngModel)]="
-               usuario.PDV_PermitirVendaClienteComTituloAtrasado"
+               usuario.pDV_PermitirVendaClienteComTituloAtrasado"
              #PDV_PermitirVendaClienteComTituloAtrasado="ngModel"
              id="PermVendClientAtras"/>
            <label class="form-check-label" for="PermVendClientAtras">Permitir vender ao cliente com titulo atrasado</label>
@@ -113,7 +113,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_PermitirVendaClienteSemLimiteCredito"
+             [(ngModel)]="usuario.pDV_PermitirVendaClienteSemLimiteCredito"
              #PDV_PermitirVendaClienteSemLimiteCredito="ngModel"
              id="PermVendClintLimitCred"/>
            <label class="form-check-label" for="PermVendClintLimitCred">Permitir vender ao cliente SEM limite de crédito</label>
@@ -121,7 +121,7 @@
          <div class="mb-3 form-check">
            <input
              type="checkbox"
-             [(ngModel)]="usuario.AlteraProduto"
+             [(ngModel)]="usuario.alteraProduto"
              #AlteraProduto="ngModel"
              class="form-check-input"
              id="PermVendProdEstNegative"/>
@@ -141,7 +141,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.CadUsuario"
+             [(ngModel)]="usuario.cadUsuario"
              #CadUsuario="ngModel"
              id="PermCadManuUser"/>
            <label class="form-check-label" for="PermCadManuUser">Permitir cadastro/manutenção de usuários</label>
@@ -150,7 +150,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.MovimentaEstoqueES"
+             [(ngModel)]="usuario.movimentaEstoqueES"
              #MovimentaEstoqueES="ngModel"
              id="PermMovEsto"/>
            <label class="form-check-label" for="PermMovEsto">Permitir Movimentar Estoque</label>
@@ -159,7 +159,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.Ret_AlteraTabPreco"
+             [(ngModel)]="usuario.ret_AlteraTabPreco"
              #Ret_AlteraTabPreco="ngModel"
              id="PermAltTabPrec"/>
            <label class="form-check-label" for="PermAltTabPrec">Permitir Alterar tabela de preço</label>
@@ -168,7 +168,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.PDV_PermitirTransfProduto"
+             [(ngModel)]="usuario.pDV_PermitirTransfProduto"
              #PDV_PermitirTransfProduto="ngModel"
              id="PermTrasfProd"/>
            <label class="form-check-label" for="PermTrasfProd">Permitir trasferencia de produtos</label>
@@ -179,7 +179,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.Ret_VerCusto"
+             [(ngModel)]="usuario.ret_VerCusto"
              #Ret_VerCusto="ngModel"
              id="PermVisuCusProd"/>
            <label class="form-check-label" for="PermVisuCusProd">Permitir Visualizar custo do produto</label>
@@ -188,7 +188,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.AcessaFinanceiro"
+             [(ngModel)]="usuario.acessaFinanceiro"
              #AcessaFinanceiro="ngModel"
              id="PermVisuFina"/>
            <label class="form-check-label" for="PermVisuFina">Permitir Visualizar Financeiro</label>
@@ -197,7 +197,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.AlteraProduto"
+             [(ngModel)]="usuario.alteraProduto"
              #AlteraProduto="ngModel"
              id="PermAltProd"/>
            <label class="form-check-label" for="PermAltProd">Permitir Alterar Produto</label>
@@ -206,7 +206,7 @@
            <input
              type="checkbox"
              class="form-check-input"
-             [(ngModel)]="usuario.AcessarRetaguarda"
+             [(ngModel)]="usuario.acessarRetaguarda"
              #AcessarRetaguarda="ngModel"
              id="PermAcessRetag"
            />

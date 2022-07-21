@@ -13,7 +13,7 @@ export class AuthService {
    ) {}
 
    authenticate(authRequest: AuthenticateRequest, dataBaseName: string) {
-
+      debugger
       let headers = new HttpHeaders();
       headers = headers.set('databaseName', dataBaseName);
 

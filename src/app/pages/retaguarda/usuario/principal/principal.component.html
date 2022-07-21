@@ -9,7 +9,8 @@
          placeholder=""
          class="form-control mb-2"
          style="width: 150px"
-         [(ngModel)]="usuario.Codigo"
+         [(ngModel)]="usuario.codigo"
+         #Codigo="ngModel"
        />
 
        <div class="col-md-10">
@@ -19,7 +20,7 @@
            id="inputNome"
            name="Nome"
            class="form-control mb-2"
-           [(ngModel)]="usuario.Nome"
+           [(ngModel)]="usuario.nome"
            required
            #Nome="ngModel"
          />
@@ -37,7 +38,7 @@
            id="inputSenha"
            name="Senha"
            class="form-control mb-2"
-           [(ngModel)]="usuario.Senha"
+           [(ngModel)]="usuario.senha"
            #Senha="ngModel"
          />
        </div>
@@ -50,7 +51,7 @@
              name="codigo"
              class="form-control mb-2 text-end"
              mask="percent" suffix="%"
-             [(ngModel)]="usuario.DescontoMax"
+             [(ngModel)]="usuario.descontoMax"
              value=""
              #DescontoMax="ngModel"
            />
@@ -63,7 +64,7 @@
              name="comissao"
              class="form-control mb-2 text-end"
              mask="percent" suffix="%"
-             [(ngModel)]="usuario.Comissao"
+             [(ngModel)]="usuario.comissao"
              #Comissao="ngModel"
            />
          </div>
@@ -75,11 +76,11 @@
          <select
            id="inputFunc"
            type="number"
-           [(ngModel)]="usuario.CodigoFuncao"
+           [(ngModel)]="usuario.codigoFuncao"
            class="form-select"
          >
-           <option *ngFor="let f of funcoes" [ngValue]="f.Codigo">
-             {{ f.Nome }}
+           <option *ngFor="let f of funcoes" [ngValue]="f.codigo">
+             {{ f.nome }}
            </option>
          </select>
          <div class="form-check my-3">
@@ -87,7 +88,7 @@
              class="form-check-input"
              type="checkbox"
              id="cbxOperaCaixa"
-             [(ngModel)]="usuario.OperadorCaixa"
+             [(ngModel)]="usuario.operadorCaixa"
              #OperadorCaixa="ngModel"
            />
            <label class="form-check-label" for="cbxOperaCaixa">
@@ -97,7 +98,7 @@
          <label for="inputCodEmpresa" class="form-label my-2"></label>
          <select *ngIf="false"
            id="inputCodEmpresa"
-           [(ngModel)]="usuario.CodigoEmpresa"
+           [(ngModel)]="usuario.codigoEmpresa"
            class="form-select"
          >
            <option *ngFor="let c of company" [ngValue]="c.codigo">
@@ -107,7 +108,7 @@
          <label for="inputJpb" class="form-label my-2"></label>
          <select *ngIf="false"
            id="inputJpb"
-           [(ngModel)]="usuario.CodigoEmpregado"
+           [(ngModel)]="usuario.codigoEmpregado"
            class="form-select"
          >
            <option *ngFor="let j of job" [ngValue]="j.codigo" >

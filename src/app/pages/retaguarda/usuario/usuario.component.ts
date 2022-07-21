@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Usuario } from 'src/app/shared/models/usuario.model';
+import { PrincipalComponent } from './principal/principal.component';
+
 
 @Component({
   selector: 'app-usuario',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioComponent implements OnInit {
 
+   user: Usuario = new Usuario();
+
   constructor() { }
 
-  ngOnInit() {
+  @ViewChild(PrincipalComponent, {static: false})
+
+  principal!: PrincipalComponent;
+
+  ngOnInit() {}
+
+  receberUser(usuario:any) {
+
+      this.user = usuario ;
   }
 
 }

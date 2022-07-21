@@ -1,7 +1,7 @@
 export class Funcoes {
 
    constructor(
-      public Codigo: number,
-      public Nome: string
+      public codigo: number,
+      public nome: string
    ){}
 }

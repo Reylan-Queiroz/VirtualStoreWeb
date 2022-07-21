@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output } from '@angular/core';
 import { EmpregadoServices } from 'src/app/core/services/empregado.service';
 import { EmpresaService } from 'src/app/core/services/empresa.Service';
 import { FuncoesService } from 'src/app/core/services/funcoes.service';
@@ -14,7 +14,7 @@ import { Usuario } from 'src/app/shared/models/usuario.model';
 })
 export class PrincipalComponent implements OnInit {
 
-   @Input() usuario: Usuario = new Usuario(); // = new Usuario(0,0,"",0,"",0,0,false,false,0,0,0,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,0,false,false) ;
+   @Input() usuario: Usuario = new Usuario();
    public funcoes: Funcoes[]=[];
    public company: Empresa[]=[];
    public job: Empregado[]=[];
@@ -28,7 +28,7 @@ export class PrincipalComponent implements OnInit {
       ) { }
 
   ngOnInit(){
-   // this.usuario = new Usuario();
+   //this.usuario = new Usuario();
    this.funcoesServices.findAll().subscribe(
        functions => {
            this.funcoes = functions;
@@ -36,7 +36,7 @@ export class PrincipalComponent implements OnInit {
        e => {
          console.log(e)
        }
-     ),
+     );
 
      this.empresaServices.findAll()
      .subscribe(
@@ -46,17 +46,18 @@ export class PrincipalComponent implements OnInit {
        e => {
          console.log(e);
        }
-     ),
-     this.empregadoService.findAll()
-     .subscribe(
-       jobs =>{
-           this.job = jobs;
+     );
+   //   this.empregadoService.findAll()
+   //   .subscribe(
+   //     jobs =>{
+   //         this.job = jobs;
 
-       },
-       e => {
-         console.log(e);
-       }
-     )
+   //     },
+   //     e => {
+   //       console.log(e);
+   //     }
+   //   )
+
 }
 
 }

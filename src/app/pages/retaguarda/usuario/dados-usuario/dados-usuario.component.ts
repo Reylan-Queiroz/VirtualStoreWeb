@@ -8,7 +8,7 @@ import { Usuario } from 'src/app/shared/models/usuario.model';
 })
 export class DadosUsuarioComponent implements OnInit {
 
-   public usuario!: Usuario;
+   public usuario: Usuario = new Usuario();
 
    addItem(value: Usuario) {
      this.usuario = value;
