@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Usuario } from 'src/app/shared/models/usuario.model';
 
 @Component({
@@ -8,7 +9,7 @@ import { Usuario } from 'src/app/shared/models/usuario.model';
 })
 export class PermissoesComponent implements OnInit {
 
-   @Input() usuario!:Usuario;
+   @Input() usuario: Usuario = new Usuario();
 
   constructor() { }
 

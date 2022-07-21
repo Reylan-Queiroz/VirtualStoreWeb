@@ -15,13 +15,13 @@
          </ul>
          <div class="tab-content">
             <div class="tab-pane fade show active" id="dadosClientes" role="tabpanel">
-               <app-principal></app-principal>
+               <app-principal [usuario]="user"></app-principal>
             </div>
             <div class="tab-pane fade" id="endereco" role="tabpanel">
-               <app-permissoes></app-permissoes>
+               <app-permissoes [usuario]="user"></app-permissoes>
             </div>
             <div class="tab-pane fade" id="email" role="tabpanel">
-               <app-localizar></app-localizar>
+               <app-localizar (newItem)="receberUser($event)"></app-localizar>
             </div>
          </div>
       </div>

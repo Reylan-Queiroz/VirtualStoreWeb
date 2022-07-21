@@ -44,6 +44,15 @@ export class Security {
          return false;
    }
 
+   public static getDataBaseName():string{
+      const data = localStorage.getItem("databaseName")
+
+      if (data)
+         return data;
+      else
+         return null as any;
+   }
+
    // public static isInRole(roles: Role[]): boolean {
    //    const user = this.getUser();
 
