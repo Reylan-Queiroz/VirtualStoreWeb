@@ -15,7 +15,7 @@ export abstract class CrudService<T, ID> implements CrudOperations<T, ID> {
    constructor(protected _http: HttpClient, protected _base: string) {}
 
    save(t: T): Observable<T> {
-      return this._http.post<T>(this._base, t, { headers: header });
+      return this._http.post<T>(this._base + "create", t, { headers: header });
    }
 
    update(id: ID, t: T): Observable<T> {
@@ -33,4 +33,6 @@ export abstract class CrudService<T, ID> implements CrudOperations<T, ID> {
    delete(id: ID): Observable<T> {
       return this._http.delete<T>(this._base + '/' + id, { headers: header });
    }
+
+
 }

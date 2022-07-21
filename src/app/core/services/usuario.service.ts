@@ -11,6 +11,6 @@ import { environment } from "src/environments/environment";
 })
 export class UsuarioSevice extends CrudService<Usuario, number> {
    constructor(protected _http: HttpClient) {
-      super(_http, `${environment.endpoint_api}/usuario/`);
+      super(_http, `${environment.endpoint_api}/Usuario/`);
     }
 }

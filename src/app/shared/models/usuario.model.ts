@@ -4,7 +4,7 @@ export class Usuario {
    public codigo: number = 0;
    public codigoIdentificacao: number = 0;
    public nome: string = "";
-   public codPessoa: number = 0;
+   public codPessoa: string = "";
    public senha: string = "";
    public descontoMax: number = 0;
    public comissao: number = 0;

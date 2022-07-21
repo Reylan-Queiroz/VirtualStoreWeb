@@ -14,9 +14,6 @@ export class UsuarioComponent implements OnInit {
 
   constructor() { }
 
-  @ViewChild(PrincipalComponent, {static: false})
-
-  principal!: PrincipalComponent;
 
   ngOnInit() {}
 
