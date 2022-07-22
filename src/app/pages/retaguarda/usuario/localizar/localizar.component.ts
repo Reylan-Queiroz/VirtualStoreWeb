@@ -10,6 +10,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FuncoesService } from 'src/app/core/services/funcoes.service';
 import { UsuarioSevice } from 'src/app/core/services/usuario.service';
 import { Funcoes } from 'src/app/shared/models/funcoes.model';
@@ -38,7 +39,8 @@ export class LocalizarComponent implements OnInit, AfterViewInit {
 
    constructor(
       private _usuarioService: UsuarioSevice,
-      private _functionService: FuncoesService
+      private _functionService: FuncoesService,
+
    ) {}
 
    async ngAfterViewInit() {
@@ -53,7 +55,9 @@ export class LocalizarComponent implements OnInit, AfterViewInit {
    obterUsuario(user: Usuario) {
 
       this.newItem.emit(user);
+
    }
+
    async load() {
       await this._usuarioService
          .findAll()

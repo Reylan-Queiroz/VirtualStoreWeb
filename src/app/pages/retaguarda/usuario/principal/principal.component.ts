@@ -95,6 +95,12 @@ export class PrincipalComponent implements OnInit {
       this.usuarioService.save(this.usuario).subscribe()
    }
 
+   removeUsuario() {
+      this.usuarioService
+   }
+
+
+
 
 
 }

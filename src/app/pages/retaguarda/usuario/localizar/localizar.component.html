@@ -32,7 +32,9 @@
      </ng-container>
 
      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-     <tr class="example-element-row clickable" mat-row *matRowDef="let row; columns: displayedColumns;" (click)="obterUsuario(row)"></tr>
+     <tr class="example-element-row clickable" mat-row *matRowDef="let row; columns: displayedColumns;"
+     (click)="obterUsuario(row)"
+     ></tr>
 
      <!-- Row shown when there is no matching data. -->
      <tr class="mat-row" *matNoDataRow>

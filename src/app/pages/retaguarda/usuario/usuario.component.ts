@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Usuario } from 'src/app/shared/models/usuario.model';
-import { PrincipalComponent } from './principal/principal.component';
 
 
 @Component({
@@ -17,7 +16,7 @@ export class UsuarioComponent implements OnInit {
 
   ngOnInit() {}
 
-  receberUser(usuario:any) {
+  receberUsuarios(usuario:any) {
 
       this.user = usuario ;
   }
