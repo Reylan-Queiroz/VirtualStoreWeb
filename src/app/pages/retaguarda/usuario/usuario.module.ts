@@ -19,6 +19,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 
+import { CurrencyMaskModule} from 'ng2-currency-mask';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+const maskConfig: Partial<IConfig> = {
+   validation: false,
+ };
+
 const routes: Routes = [
    {
       path: '',
@@ -48,7 +55,9 @@ const routes: Routes = [
       MatTableModule,
       MatInputModule,
       MatSortModule,
-      MatRippleModule
+      MatRippleModule,
+      NgxMaskModule,
+      CurrencyMaskModule
    ],
     exports: [
       UsuarioComponent,

@@ -97,10 +97,6 @@ export class LocalizarComponent implements OnInit, AfterViewInit {
       document.getElementById('btn_0')?.click();
    }
 
-   remove() {
-      this.usuario.excluido = true;
-      this._usuarioService.update(0, this.usuario).subscribe(() => this.users); // didatica não funciona
-   }
 
    applyFilter(event: Event) {
       const filterValue = (event.target as HTMLInputElement).value;

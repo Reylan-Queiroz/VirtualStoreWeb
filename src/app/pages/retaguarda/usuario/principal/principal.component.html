@@ -51,10 +51,10 @@
                   id="inputDescMax"
                   name="codigo"
                   class="form-control mb-2 text-end"
-                  mask="percent" suffix="%"
                   [(ngModel)]="usuario.descontoMax"
                   value=""
                   formControlName="descontoMax"
+                  mask=" 000,00"
                 />
               </div>
               <div class="col-md-5">
@@ -64,9 +64,9 @@
                   id="inputComissao"
                   name="comissao"
                   class="form-control mb-2 text-end"
-                  mask="percent" suffix="%"
                   [(ngModel)]="usuario.comissao"
                   formControlName="comissao"
+                  mask=" 000,00"
                 />
               </div>
            </div>

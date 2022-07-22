@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmpregadoServices } from 'src/app/core/services/empregado.service';
 import { EmpresaService } from 'src/app/core/services/empresa.Service';
@@ -90,7 +90,7 @@ export class PrincipalComponent implements OnInit {
 
    criarUsuario() {
       console.log(this.usuario);
-      this.usuario.codPessoa = "teste"
+      this.usuario.codPessoa = ""
 
       this.usuarioService.save(this.usuario).subscribe()
    }
